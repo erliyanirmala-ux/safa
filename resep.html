@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resep Nasi Goreng</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffd6e7, #d8f3ff);
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        /* JUDUL */
+        .judul {
+            text-align: center;
+            color: #ff4081;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .judul::after {
+            content: "";
+            display: block;
+            width: 180px;
+            height: 4px;
+            background-color: #ff4081;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        /* KARTU RESEP */
+        .resep {
+            background-color: white;
+            border: 4px solid #ffb6d5;
+            border-radius: 25px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(255, 64, 129, 0.2);
+            transition: 0.4s ease;
+        }
+
+        .resep:hover {
+            background-color: #fff0f7;
+            border-color: #ff4081;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 64, 129, 0.3);
+        }
+
+        /* GAMBAR */
+        .gambar {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+            transition: 0.5s ease;
+        }
+
+        .gambar:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1) saturate(1.3);
+        }
+
+        /* NAMA RESEP */
+        .nama-resep {
+            color: #e91e63;
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #ff80ab;
+            padding-bottom: 8px;
+        }
+
+        .deskripsi {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* BAHAN */
+        .bahan {
+            background-color: #fff8d6;
+            border: 3px solid #ffe082;
+            border-radius: 18px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .bahan h3 {
+            color: #d69e00;
+            margin-bottom: 10px;
+        }
+
+        /* ALAT */
+        .alat {
+            background-color: #dff7ff;
+            border: 3px solid #6dd5ed;
+            border-radius: 18px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .alat h3 {
+            color: #008bb5;
+            margin-bottom: 10px;
+        }
+
+        /* CARA PEMBUATAN */
+        .cara {
+            background-color: #e8dfff;
+            border: 3px solid #a78bfa;
+            border-radius: 18px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .cara h3 {
+            color: #7048c8;
+            margin-bottom: 10px;
+        }
+
+        /* LIST */
+        ul,
+        ol {
+            margin-left: 25px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        /* TOMBOL KEMBALI */
+        .tombol-kembali {
+            display: block;
+            width: 230px;
+            margin: 30px auto 0;
+            padding: 14px 20px;
+
+            background-color: red;
+            color: white;
+
+            text-align: center;
+            text-decoration: none;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            border-radius: 30px;
+            border: 3px solid #b30000;
+
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+
+        /* BERUBAH HIJAU SETELAH DIKLIK */
+        .tombol-kembali.aktif {
+            background-color: green;
+            border-color: #006400;
+        }
+
+        .tombol-kembali:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="judul">
+            🍴 Resep Makanan
+        </h1>
+
+        <div class="resep">
+
+            <!-- GAMBAR MAKANAN -->
+            <img
+                class="gambar"
+                src="https://images.unsplash.com/photo-1603133872878-684f208fb84b"
+                alt="Nasi Goreng Spesial"
+            >
+
+            <!-- NAMA RESEP -->
+            <h2 class="nama-resep">
+                🍳 Nasi Goreng Spesial
+            </h2>
+
+            <p class="deskripsi">
+                Nasi goreng spesial yang lezat, sederhana, dan mudah
+                dibuat di rumah.
+            </p>
+
+            <!-- BAHAN -->
+            <div class="bahan">
+
+                <h3>🥕 Bahan-bahan</h3>
+
+                <ul>
+                    <li>2 piring nasi putih</li>
+                    <li>2 butir telur</li>
+                    <li>2 siung bawang putih</li>
+                    <li>3 siung bawang merah</li>
+                    <li>2 sendok makan kecap manis</li>
+                    <li>Garam secukupnya</li>
+                    <li>Minyak goreng secukupnya</li>
+                </ul>
+
+            </div>
+
+            <!-- ALAT -->
+            <div class="alat">
+
+                <h3>🔪 Alat-alat</h3>
+
+                <ul>
+                    <li>Wajan</li>
+                    <li>Spatula</li>
+                    <li>Pisau</li>
+                    <li>Talenan</li>
+                    <li>Piring</li>
+                    <li>Sendok</li>
+                </ul>
+
+            </div>
+
+            <!-- CARA PEMBUATAN -->
+            <div class="cara">
+
+                <h3>👨‍🍳 Cara Pembuatan</h3>
+
+                <ol>
+                    <li>Panaskan minyak di dalam wajan.</li>
+                    <li>Tumis bawang putih dan bawang merah hingga harum.</li>
+                    <li>Masukkan telur lalu orak-arik.</li>
+                    <li>Masukkan nasi putih dan aduk hingga rata.</li>
+                    <li>Tambahkan kecap manis dan garam.</li>
+                    <li>Aduk semua bahan hingga tercampur rata.</li>
+                    <li>Masak hingga nasi matang dan harum.</li>
+                    <li>Angkat dan sajikan selagi hangat.</li>
+                </ol>
+
+            </div>
+
+        </div>
+
+        <!-- TOMBOL KEMBALI -->
+        <a
+            href="index.html"
+            class="tombol-kembali"
+            id="tombolKembali"
+            onclick="ubahWarna()"
+        >
+            🏠 Kembali ke Beranda
+        </a>
+
+    </div>
+
+    <script>
+        function ubahWarna() {
+            const tombol = document.getElementById("tombolKembali");
+
+            tombol.classList.add("aktif");
+        }
+    </script>
+
+</body>
+</html>
