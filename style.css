@@ -1,0 +1,44 @@
+h5{
+    font-family: "lucida sans" ;
+    font-size: 30px;
+    text-decoration: underline;
+   }
+   ol{
+    font-family: "Courier New";
+    font-size: 14px;
+    color:blue;
+   }
+   ul{
+    font-family: "Courier New";
+    font-size: 14px;
+    color:rgb(192, 42, 164);
+   }
+   /*contoh selector class*/
+   .paragraf{
+    font-size: 24px;
+    font-weight: bold ;
+    font-family: helvetica;
+    color:rgb(194, 103, 214);
+    text-align: center;
+   }
+   /*contoh selector ID*/
+   #teks{
+    font-size: 18px;
+    text-decoration: highlight;
+    color: rgb(189, 143, 232);
+    text-align: right;
+   }
+   /*contoh class untuk gambar*/
+   .gambar{
+       width: 10%;
+       height: auto;
+       border: 2px solid #4a0404 ;
+       border-radius: 15px;
+       border-color: rgb(245, 114, 191);
+
+   }
+   .gambar hover{
+      width: 15%;
+      height: auto;
+      border-color: black;
+   }
